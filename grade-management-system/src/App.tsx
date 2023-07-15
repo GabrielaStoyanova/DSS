@@ -37,10 +37,12 @@ function App() {
 
   return (
     <div className="container">
-      <div className="navbar"></div>
-      <div className="content-list"></div>
-      <div className="content-details"></div>
-      <div className="footer"></div>
+      <div className="navbar">Grade Management system</div>
+      <div className="content">
+      <div className="content-list">content list</div>
+      <div className="content-details">content details</div>
+      </div>
+      <div className="footer">footer</div>
     </div>
   );
 }
