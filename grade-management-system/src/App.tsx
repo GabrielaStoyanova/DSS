@@ -1,24 +1,46 @@
 import React from 'react';
-import logo from './logo.svg';
+import { useState } from 'react';
+import {Grade} from './interfaces';
 import './App.css';
 
 function App() {
+  let grade1: Grade ={
+    id: 1,
+    studentFirstName: "Petar",
+    studentLastName: "Stoyanov",
+    subject: "Math",
+    score: 3, 
+    date: new Date(),
+  };
+
+  let grade2: Grade ={
+    id: 2,
+    studentFirstName: "Katq",
+    studentLastName: "Milenova",
+    subject: "Physics",
+    score: 4, 
+    date: new Date(),
+  };
+  
+  let grade3: Grade ={
+    id: 3,
+    studentFirstName: "Sonq",
+    studentLastName: "Petrushkova",
+    subject: "English",
+    score: 6, 
+    date: new Date(),
+  };
+
+  let GradeArray = [grade1, grade2, grade3];
+
+  const [grades, setGrades] = useState(GradeArray);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container">
+      <div className="navbar"></div>
+      <div className="content-list"></div>
+      <div className="content-details"></div>
+      <div className="footer"></div>
     </div>
   );
 }
