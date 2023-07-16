@@ -4,7 +4,7 @@
   flex-direction: column;
   margin: 0;
   padding: 0;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .content{
@@ -14,7 +14,7 @@
   margin: 0;
   padding: 0;
   height: 85vh;
-  width: 100vh;
+  min-width: 100vw;
 }
 
 .navbar{
@@ -28,11 +28,17 @@
 .content-list{
   background-color: red;
   color: #fff;
+  order: 1;
+  width: 70vw;
+  flex-grow: 2;
 }
 
 .content-details{
   background-color: blue;
   color: #fff;
+  order: 2;
+  width: 30vw;
+  flex-grow: 1;
 }
 
 .footer{
