@@ -1,7 +1,8 @@
 import React from 'react';
 import { useState } from 'react';
 import {Grade} from './interfaces';
-import './App.css';
+import './App.css'; //Main CSS page, mainly used Flexbox 
+import GradeList from './components/GradeList'; //First Component for the content 
 
 function App() {
   let grade1: Grade ={
@@ -36,11 +37,13 @@ function App() {
   const [grades, setGrades] = useState(GradeArray);
 
   return (
-    <div className="container">
+    <div className="container"> 
       <div className="navbar">Grade Management system</div>
       <div className="content">
-      <div className="content-list">content list</div>
-      <div className="content-details">content details</div>
+        <div className="content-list">
+
+        </div>
+        <div className="content-details">content details</div>
       </div>
       <div className="footer">footer</div>
     </div>
