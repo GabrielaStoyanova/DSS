@@ -3,6 +3,7 @@ import { useState } from 'react';
 import {Grade} from './interfaces';
 import './App.css'; //Main CSS page, mainly used Flexbox 
 import GradeList from './components/GradeList'; //First Component for the content 
+import GradeDetails from './components/GradeDetails'; //Second Component for the content
 
 function App() {
   let grade1: Grade ={
@@ -75,7 +76,9 @@ function App() {
         <div className="content-list">
           <GradeList grades={grades} onSelectedGrade={handleGradeSelection} onDeletedGrade={(newGrades) => setGrades(handleGradeDelete(newGrades))} />
         </div>
-        <div className="content-details">content details</div>
+        <div className="content-details">
+          <GradeDetails onSave={handleSaveGrade} onUpdate={handleGradeUpdate} selectedGrade={selectedGrade} />
+        </div>
       </div>
       <div className="footer">footer</div>
     </div>
