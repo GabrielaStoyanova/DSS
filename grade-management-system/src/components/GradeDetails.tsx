@@ -1,5 +1,6 @@
 import React, { useState, ChangeEvent, FormEvent, useEffect } from 'react';
 import { Grade } from '../interfaces';
+import './GradeDetails.css';
 
 interface Props {
     onSave: (grade: Grade) => void;
@@ -54,8 +55,8 @@ interface Props {
 
       return (
         <>
-          <h2>Grade Details:</h2>
-          <form onSubmit={handleSubmit}>
+          <h2 className='par2'>Grade Details:</h2>
+          <form className='form1' onSubmit={handleSubmit}>
             <div>
               <label htmlFor="studentFirstName">Student First Name:</label>
               <input
@@ -112,9 +113,8 @@ interface Props {
               />
             </div>
             <button id='saveButton' type='submit'>Save</button>
+            <button id='clearButton' onClick={handleClear} >Clear</button>
           </form>
-    
-          <button id='clearButton' onClick={handleClear} >Clear</button>
         </>
       );
     };
