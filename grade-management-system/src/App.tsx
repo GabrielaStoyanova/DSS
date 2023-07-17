@@ -35,13 +35,45 @@ function App() {
   let GradeArray = [grade1, grade2, grade3];
 
   const [grades, setGrades] = useState(GradeArray);
+  const [selectedGrade, setGrade] = useState<Grade>(grade1);
+
+  const handleSaveGrade = (grade: Grade) => {
+    let gradesLength = grades.length + 1;
+    grade.id = gradesLength;
+    let newGradeArray = [...grades, grade] as Grade[];
+    setGrades(newGradeArray);
+
+  };
+
+  const handleGradeUpdate = (grade: Grade) => {
+
+    let gradeIndex = grades.findIndex((item) => item.id === grade.id);
+    let gradesUpdateArr = [...grades];
+    let updatedGrade = { ...grades[gradeIndex] };
+    updatedGrade = grade;
+    gradesUpdateArr[gradeIndex] = updatedGrade;
+    setGrades(gradesUpdateArr);
+
+  }
+
+  const handleGradeSelection = (grade: Grade) => {
+    setGrade(grade);
+  }
+
+  const handleGradeDelete = (gradeArr: Grade[]) => {
+      let idIndex =1;
+      for(let i =0; i < gradeArr.length; i++){
+        gradeArr[i].id = idIndex++;
+      }
+      return gradeArr;
+  };
 
   return (
     <div className="container"> 
       <div className="navbar">Grade Management system</div>
       <div className="content">
         <div className="content-list">
-
+          <GradeList grades={grades} onSelectedGrade={handleGradeSelection} onDeletedGrade={(newGrades) => setGrades(handleGradeDelete(newGrades))} />
         </div>
         <div className="content-details">content details</div>
       </div>
