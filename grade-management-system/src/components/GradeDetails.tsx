@@ -55,7 +55,8 @@ interface Props {
 
       return (
         <>
-          <h2 className='par2'>Grade Details:</h2>
+        <div className='container'>
+          <h2 className='h2'>Grade Details:</h2>
           <form className='form1' onSubmit={handleSubmit}>
             <div>
               <label htmlFor="studentFirstName">Student First Name:</label>
@@ -115,6 +116,7 @@ interface Props {
             <button id='saveButton' type='submit'>Save</button>
             <button id='clearButton' onClick={handleClear} >Clear</button>
           </form>
+        </div>
         </>
       );
     };
