@@ -1,6 +1,7 @@
 import React from 'react';
 import {Grade} from '../interfaces';
 import { useState } from 'react';
+import './GradeList.css';
 
 interface Props { //!Have to fill these props,which are like parameters, when using <GradeList/> in App.tsx!
     grades: Grade[];
@@ -30,7 +31,7 @@ const GradeList: React.FC<Props> = (props: Props) => {
     
       return (
         <>
-          <h2>Grade List</h2>
+          <h2 className='h2List'>Grade List</h2>
     
           {props.grades.length === 0 ? <h3>No grades found</h3> : null}
           <ul>
