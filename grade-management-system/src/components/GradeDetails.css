@@ -9,12 +9,14 @@
 
 .h2{
     text-align: center;
+    text-shadow: 2px 2px 4px #000000;
 }
 
 label{
     text-align: center;
     margin-right: 5px;
     display:block;
+    text-shadow: 2px 2px 4px #000000;
 }
 
 input{
@@ -41,6 +43,6 @@ input[type="text"]{
 }
 
 .buttonsDetails{
-    width: 161.333px;
-    height: 15.333;
+    display: flex;
+    justify-content: space-between;
 }
