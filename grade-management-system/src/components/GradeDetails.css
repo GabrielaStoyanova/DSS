@@ -4,7 +4,7 @@
     align-items: center;
     flex-direction: column;
     font-family: 'Times New Roman';
-    min-height: 75vh;
+    min-height: 80vh;
 }
 
 .h2{
@@ -22,4 +22,20 @@ input{
     margin-top: 10px;
     display:block;
     text-align: center;
+}
+
+input[type="date"]{
+    text-align: center;
+    font-family: 'Times New Roman';
+    width: 161.333px;
+    height: 15.333;
+    padding-top: 1;
+    padding-bottom: 1;
+    padding-left: 2;
+    padding-right: 2;
+}
+
+input[type="text"]{
+    text-align: center;
+    font-family: 'Times New Roman';
 }
