@@ -40,7 +40,7 @@ interface Props {
     
       const handleDateChange = (e: ChangeEvent<HTMLInputElement>) => {
         const { value } = e.target;
-        setGrade(prevGrade => ({ ...prevGrade, Date: new Date(value) }));
+        setGrade(prevGrade => ({ ...prevGrade, date: value ? new Date(value) : new Date() }));
       };
     
       const handleSubmit = (e: FormEvent) => {
