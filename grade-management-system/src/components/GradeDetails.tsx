@@ -24,9 +24,11 @@ interface Props {
     const handleClear = () => {
         setGrade(emptyGrade);
       };    
+    
+      
   
-    useEffect(() => {
-      if (props.selectedGrade.score) {
+    useEffect(() => { //Click and fill in the input texts
+      if (props.selectedGrade && Object.keys(props.selectedGrade).length > 0) {
         setGrade(props.selectedGrade);
       } else {
         handleClear();
