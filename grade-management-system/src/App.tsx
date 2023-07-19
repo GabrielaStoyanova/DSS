@@ -73,7 +73,7 @@ function App() {
   return (
     <div className="container"> 
       <div className="navbar">
-        <a className='aGit' href="https://github.com/GabrielaStoyanova/DSS" target="_blank" rel="noreferrence">
+        <a className='aGit' href="https://github.com/GabrielaStoyanova/DSS" target="_blank">
           <img className='git' src={logo} alt="GitHub"/>
         </a>
         <h1 className='n1Nav'>Grade Management system</h1>
