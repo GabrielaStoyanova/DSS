@@ -34,7 +34,7 @@ const GradeList: React.FC<Props> = (props: Props) => {
           <h2 className='h2List'>Grade List</h2>
     
           {props.grades.length === 0 ? <h3>No grades found</h3> : null}
-          <ul>
+          <ul className='ulGradeList'>
             {props.grades.map((grade) => (
               <li key={grade.id} onClick={(e) => { handleClick(grade.id,isGradeDeleted) }}>
                 <p className='id'>{grade.id}</p>

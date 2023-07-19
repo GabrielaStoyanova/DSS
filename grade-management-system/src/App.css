@@ -27,6 +27,12 @@
   flex-grow: 1;
 }
 
+.n1Nav{
+  text-align: center;
+  text-shadow: 2px 2px 4px #000000;
+  margin-top: 10px;
+}
+
 .content-list{
   color: #fff;
   order: 1;

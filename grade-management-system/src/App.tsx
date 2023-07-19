@@ -71,7 +71,9 @@ function App() {
 
   return (
     <div className="container"> 
-      <div className="navbar">Grade Management system</div>
+      <div className="navbar">
+        <h1 className='n1Nav'>Grade Management system</h1>
+      </div>
       <div className="content">
         <div className="content-list">
           <GradeList grades={grades} onSelectedGrade={handleGradeSelection} onDeletedGrade={(newGrades) => setGrades(handleGradeDelete(newGrades))} />
