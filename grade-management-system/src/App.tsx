@@ -37,7 +37,7 @@ function App() {
   let GradeArray = [grade1, grade2, grade3];
 
   const [grades, setGrades] = useState(GradeArray);
-  const [selectedGrade, setGrade] = useState<Grade>(grade1);
+  const [selectedGrade, setGrade] = useState<Grade>({} as Grade);
 
   const handleSaveGrade = (grade: Grade) => {
     let gradesLength = grades.length + 1;

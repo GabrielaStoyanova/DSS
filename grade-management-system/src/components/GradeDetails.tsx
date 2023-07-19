@@ -24,11 +24,9 @@ interface Props {
     const handleClear = () => {
         setGrade(emptyGrade);
       };    
-    
-      
-  
+
     useEffect(() => { //Click and fill in the input texts
-      if (props.selectedGrade && Object.keys(props.selectedGrade).length > 0) {
+      if (props.selectedGrade.score !== 0) {
         setGrade(props.selectedGrade);
       } else {
         handleClear();
@@ -42,7 +40,7 @@ interface Props {
     
       const handleDateChange = (e: ChangeEvent<HTMLInputElement>) => {
         const { value } = e.target;
-        setGrade(prevGrade => ({ ...prevGrade, publicationDate: new Date(value) }));
+        setGrade(prevGrade => ({ ...prevGrade, Date: new Date(value) }));
       };
     
       const handleSubmit = (e: FormEvent) => {
@@ -110,7 +108,7 @@ interface Props {
                 type="date"
                 id="field5"
                 name="date"
-                value={selectedGrade.date.toISOString().substr(0, 10)}
+                value={selectedGrade.date ? selectedGrade.date.toISOString().substr(0, 10) : ''}
                 onChange={handleDateChange}
                 required
               />
