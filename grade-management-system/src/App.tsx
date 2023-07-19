@@ -73,6 +73,7 @@ function App() {
     <div className="container"> 
       <div className="navbar">
         <h1 className='n1Nav'>Grade Management system</h1>
+        <img src='./Pictures/GitHub-Mark.png' alt='GitHub'></img>
       </div>
       <div className="content">
         <div className="content-list">
