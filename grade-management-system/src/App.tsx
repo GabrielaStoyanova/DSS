@@ -86,7 +86,9 @@ function App() {
           <GradeDetails onSave={handleSaveGrade} onUpdate={handleGradeUpdate} selectedGrade={selectedGrade} />
         </div>
       </div>
-      <div className="footer">footer</div>
+      <div className="footer">
+        <p className='Pfooter'>© 2023 Library Management System. All rights reserved.</p>
+      </div>
     </div>
 
   );

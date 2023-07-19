@@ -86,3 +86,18 @@
   flex-grow: 1;
   background-color: #0A2647;
 }
+
+.Pfooter{
+  font-family: 'Times New Roman';
+  text-shadow: 2px 2px 4px #000000;
+  color: #fff;
+  transition: transform .2s;
+  margin-top: 7px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Pfooter:hover{
+  text-shadow: 4px 4px 8px #000000;
+}

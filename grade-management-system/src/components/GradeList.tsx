@@ -31,7 +31,9 @@ const GradeList: React.FC<Props> = (props: Props) => {
     
       return (
         <>
+        
           <h2 className='h2List'>Grade List</h2>
+          <hr></hr>
     
           {props.grades.length === 0 ? <h3>No grades found</h3> : null}
           <ul className='ulGradeList'>
