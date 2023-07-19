@@ -4,6 +4,7 @@ import {Grade} from './interfaces';
 import './App.css'; //Main CSS page, mainly used Flexbox 
 import GradeList from './components/GradeList'; //First Component for the content 
 import GradeDetails from './components/GradeDetails'; //Second Component for the content
+import logo from './Pictures/GitHub-Mark.png';
 
 function App() {
   let grade1: Grade ={
@@ -72,8 +73,10 @@ function App() {
   return (
     <div className="container"> 
       <div className="navbar">
+        <a className='aGit' href="https://github.com/GabrielaStoyanova/DSS" target="_blank" rel="noreferrence">
+          <img className='git' src={logo} alt="GitHub"/>
+        </a>
         <h1 className='n1Nav'>Grade Management system</h1>
-        <img src='./Pictures/GitHub-Mark.png' alt='GitHub'></img>
       </div>
       <div className="content">
         <div className="content-list">

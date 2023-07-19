@@ -19,19 +19,49 @@
 }
 
 .navbar{
+  display: flex;
   background-color: #0A2647;
-  color: #fff;
-  align-self: center;
+  align-items: center;
+  justify-content: space-between;
   width: 100vw;
   height: 10vh;
   flex-grow: 1;
+  overflow: hidden;
 }
 
 .n1Nav{
   text-align: center;
   text-shadow: 2px 2px 4px #000000;
-  margin-top: 10px;
+  margin-top: 15px;
+  margin-left: 10px;
+  color: #fff;
+  order: 1;
+  transition: transform .2s;
 }
+
+.n1Nav:hover{
+  text-shadow: 4px 4px 8px #000000;
+}
+
+.aGit{
+  order: 2;
+  transition: transform .2s;
+}
+
+.aGit:hover{
+  transform: scale(1.2);
+}
+
+.git{
+  height: 40px;
+  width: 40px;
+  order: 2;
+  border-radius: 20px;
+  margin-right: 10px;
+  margin-top: 3px;
+  padding: 0;
+}
+
 
 .content-list{
   color: #fff;
