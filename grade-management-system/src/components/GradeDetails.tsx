@@ -6,6 +6,7 @@ interface Props {
     onSave: (grade: Grade) => void;
     onUpdate: (grade: Grade) => void;
     selectedGrade: Grade;
+    grades: Grade[];
   }
   
   const GradeDetails: React.FC<Props> = (props: Props) => {
@@ -48,7 +49,13 @@ interface Props {
         if (selectedGrade.id !== -1) {
           props.onUpdate(selectedGrade);
         } else {
-          props.onSave(selectedGrade);
+          const newId = props.grades.length > 0 ? Math.max(...props.grades.map(grade => grade.id)) + 1 : 1;
+          const newGrade: Grade = {
+          ...selectedGrade,
+          id: newId,
+          };
+          props.onSave(newGrade);
+          handleClear();
         }
     
       };

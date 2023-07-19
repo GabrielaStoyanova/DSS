@@ -83,7 +83,7 @@ function App() {
           <GradeList grades={grades} onSelectedGrade={handleGradeSelection} onDeletedGrade={(newGrades) => setGrades(handleGradeDelete(newGrades))} />
         </div>
         <div className="content-details">
-          <GradeDetails onSave={handleSaveGrade} onUpdate={handleGradeUpdate} selectedGrade={selectedGrade} />
+          <GradeDetails onSave={handleSaveGrade} onUpdate={handleGradeUpdate} selectedGrade={selectedGrade} grades={grades} />
         </div>
       </div>
       <div className="footer">
