@@ -115,7 +115,7 @@ interface Props {
                 type="date"
                 id="field5"
                 name="date"
-                value={selectedGrade.date ? selectedGrade.date.toISOString().substr(0, 10) : ''}
+                value={selectedGrade.date ? selectedGrade.date.toISOString().substr(0, 10):""}
                 onChange={handleDateChange}
                 required
               />
