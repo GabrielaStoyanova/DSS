@@ -10,7 +10,6 @@ interface Props { //!Have to fill these props,which are like parameters, when us
   }
 
 const GradeList: React.FC<Props> = (props: Props) => {
-    //const [selectedBookId, setSelectedBookId] = useState<number | null>(props.books.length === 0 ? null : props.books[0].id);
     const [isGradeDeleted,setIsGradeDeleted] = useState(false);
     const [selectedGrade,setGrade] = useState<Grade>();
 

@@ -31,7 +31,7 @@ interface Props {
       } else {
         handleClear();
       }
-    }, [props.onSave , props.selectedGrade])
+    }, [props.onSave , props.selectedGrade]) //props.onSave - to clear the fields after deletion 
 
     const handleInputChange = (e: ChangeEvent<HTMLInputElement>) => {
         const { name, value } = e.target;
@@ -40,7 +40,7 @@ interface Props {
     
       const handleDateChange = (e: ChangeEvent<HTMLInputElement>) => {
         const { value } = e.target;
-        setGrade(prevGrade => ({ ...prevGrade, date: value ? new Date(value) : emptyGrade.date, }));
+        setGrade(prevGrade => ({ ...prevGrade, date: value ? new Date(value) : emptyGrade.date, })); //Handle the Date variable 
       };
     
       const handleSubmit = (e: FormEvent) => {
@@ -53,7 +53,7 @@ interface Props {
           //...selectedGrade,
           //id: newId,
           //};
-          props.onSave(selectedGrade); //props.onSave(newGrade); //Trying another way for saving the items, but doesn't work 
+          props.onSave(selectedGrade); //props.onSave(newGrade); //Trying another way for saving the items 
           handleClear();
         }
     
