@@ -6,7 +6,6 @@ interface Props {
     onSave: (grade: Grade) => void;
     onUpdate: (grade: Grade) => void;
     selectedGrade: Grade;
-    grades: Grade[];
   }
   
   const GradeDetails: React.FC<Props> = (props: Props) => {
@@ -41,7 +40,7 @@ interface Props {
     
       const handleDateChange = (e: ChangeEvent<HTMLInputElement>) => {
         const { value } = e.target;
-        setGrade(prevGrade => ({ ...prevGrade, date: value ? new Date(value) : new Date() }));
+        setGrade(prevGrade => ({ ...prevGrade, date: value ? new Date(value) : emptyGrade.date, }));
       };
     
       const handleSubmit = (e: FormEvent) => {
@@ -49,12 +48,12 @@ interface Props {
         if (selectedGrade.id !== -1) {
           props.onUpdate(selectedGrade);
         } else {
-          const newId = props.grades.length > 0 ? Math.max(...props.grades.map(grade => grade.id)) + 1 : 1;
-          const newGrade: Grade = {
-          ...selectedGrade,
-          id: newId,
-          };
-          props.onSave(newGrade);
+          //const newId = props.selectedGrade ? Math.max(...props.selectedGrade.map(item => item.id)) + 1 : 1;
+          //const newGrade: Grade = {
+          //...selectedGrade,
+          //id: newId,
+          //};
+          props.onSave(selectedGrade); //props.onSave(newGrade); //Trying another way for saving the items, but doesn't work 
           handleClear();
         }
     

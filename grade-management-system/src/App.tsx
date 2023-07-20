@@ -39,12 +39,13 @@ function App() {
   const [grades, setGrades] = useState(GradeArray);
   const [selectedGrade, setGrade] = useState<Grade>({} as Grade);
 
+  
+
   const handleSaveGrade = (grade: Grade) => {
     let gradesLength = grades.length + 1;
     grade.id = gradesLength;
     let newGradeArray = [...grades, grade] as Grade[];
     setGrades(newGradeArray);
-
   };
 
   const handleGradeUpdate = (grade: Grade) => {
@@ -55,7 +56,6 @@ function App() {
     updatedGrade = grade;
     gradesUpdateArr[gradeIndex] = updatedGrade;
     setGrades(gradesUpdateArr);
-
   }
 
   const handleGradeSelection = (grade: Grade) => {
@@ -83,7 +83,7 @@ function App() {
           <GradeList grades={grades} onSelectedGrade={handleGradeSelection} onDeletedGrade={(newGrades) => setGrades(handleGradeDelete(newGrades))} />
         </div>
         <div className="content-details">
-          <GradeDetails onSave={handleSaveGrade} onUpdate={handleGradeUpdate} selectedGrade={selectedGrade} grades={grades} />
+          <GradeDetails onSave={handleSaveGrade} onUpdate={handleGradeUpdate} selectedGrade={selectedGrade} />
         </div>
       </div>
       <div className="footer">
