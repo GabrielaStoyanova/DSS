@@ -34,10 +34,19 @@ function App() {
     date: new Date(),
   };
 
+  let grade4: Grade ={ //Used for initial state for our variable
+    id: -1,
+    studentFirstName: "",
+    studentLastName: "",
+    subject: "",
+    score: 0, 
+    date: new Date(),
+  };
+
   let GradeArray = [grade1, grade2, grade3];
 
   const [grades, setGrades] = useState(GradeArray);
-  const [selectedGrade, setGrade] = useState<Grade>({} as Grade);
+  const [selectedGrade, setGrade] = useState<Grade>(grade4); //{} as Grade - second solution //grade1 - first solution
 
   
 
