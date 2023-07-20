@@ -32,7 +32,7 @@ interface Props {
       } else {
         handleClear();
       }
-    }, [props.selectedGrade])
+    }, [props.onSave , props.selectedGrade])
 
     const handleInputChange = (e: ChangeEvent<HTMLInputElement>) => {
         const { name, value } = e.target;
@@ -66,7 +66,7 @@ interface Props {
           <h2 className='h2'>Grade Details:</h2>
           <form onSubmit={handleSubmit}>
             <div>
-              <label htmlFor="studentFirstName">Student First Name:</label>
+              <label htmlFor="studentFirstName" className='labelGradeDetails'>Student First Name:</label>
               <input
                 type="text"
                 id="field1"
@@ -77,7 +77,7 @@ interface Props {
               />
             </div>
             <div>
-              <label htmlFor="studentLastName">Student Last Name:</label>
+              <label htmlFor="studentLastName" className='labelGradeDetails'>Student Last Name:</label>
               <input
                 type="text"
                 id="field2"
@@ -88,7 +88,7 @@ interface Props {
               />
             </div>
             <div>
-              <label htmlFor="subject">Subject:</label>
+              <label htmlFor="subject" className='labelGradeDetails'>Subject:</label>
               <input
                 type="text"
                 id="field3"
@@ -99,7 +99,7 @@ interface Props {
               />
             </div>
             <div>
-              <label htmlFor="score">Score:</label>
+              <label htmlFor="score" className='labelGradeDetails'>Score:</label>
               <input
                 type="number"
                 id="field4"
@@ -110,7 +110,7 @@ interface Props {
               />
             </div>
             <div>
-              <label htmlFor="date">Date:</label>
+              <label htmlFor="date" className='labelGradeDetails'>Date:</label>
               <input
                 type="date"
                 id="field5"
