@@ -63,7 +63,6 @@ input[type="text"]{
     color: #36395A;
     cursor: pointer;
     display: inline-flex;
-    font-family: "JetBrains Mono",monospace;
     height: 28px;
     justify-content: center;
     list-style: none;
@@ -107,7 +106,6 @@ input[type="text"]{
     color: #36395A;
     cursor: pointer;
     display: inline-flex;
-    font-family: "JetBrains Mono",monospace;
     height: 28px;
     justify-content: center;
     list-style: none;
