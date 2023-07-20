@@ -39,12 +39,12 @@ const GradeList: React.FC<Props> = (props: Props) => {
           <ul className='ulGradeList'>
             {props.grades.map((grade) => (
               <li key={grade.id} onClick={(e) => { handleClick(grade.id,isGradeDeleted) }}>
-                <p className='id'>{grade.id}</p>
-                <p className='field1'>{grade.studentFirstName}</p>
-                <p className='field2'>{grade.studentLastName}</p>
-                <p className='field3'>{grade.subject}</p>
-                <p className='field4'>{grade.score}</p>
-                <p className='field5'>{grade.date.toString()}</p>
+                <p className='id'><strong>ID:</strong> {grade.id}</p>
+                <p className='field1'><strong>First Name:</strong> {grade.studentFirstName}</p>
+                <p className='field2'><strong>Last Name:</strong> {grade.studentLastName}</p>
+                <p className='field3'><strong>Subject:</strong> {grade.subject}</p>
+                <p className='field4'><strong>Score:</strong> {grade.score}</p>
+                <p className='field5'><strong>Date:</strong> {grade.date.toString()}</p>
     
                 <button className="deleteButton" onClick={() => handleDelete(grade.id)}>Delete</button>
               </li>
